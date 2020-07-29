@@ -35,7 +35,6 @@ class Gestbus extends StatelessWidget {
                         child: ListTile(
                           leading: Icon(Icons.euro_symbol),
                           title: Text('13'),
-                          subtitle: Text('Je suis las'),
                         ),
                       ),
                     ),
