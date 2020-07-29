@@ -24,7 +24,13 @@ class Gestbus extends StatelessWidget {
               Container(
                 margin: EdgeInsets.all(10.0),
                 padding: EdgeInsets.all(10.0),
-                color: Colors.blueGrey,
+                decoration: BoxDecoration(
+                  border: Border.all(width: 2.0),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(5.0),
+                  ),
+                ),
+//                color: Colors.blueGrey,
                 child: Row(
                   children: <Widget>[
                     Expanded(
