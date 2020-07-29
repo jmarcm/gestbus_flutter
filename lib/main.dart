@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(Gestbus());
@@ -7,7 +8,7 @@ class Gestbus extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-//        backgroundColor: Colors.purple[200],
+        backgroundColor: Colors.purple[200],
         appBar: AppBar(
           title: Text("Gestbus"),
           centerTitle: true,
@@ -17,36 +18,49 @@ class Gestbus extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Expanded(
-                flex: 4,
-                child: Container(
-                  color: Colors.redAccent,
-                  child: Text("Zone 1"),
-                ),
-              ),
-              Expanded(
-                flex: 4,
-                child: Text("Zone 2"),
-              ),
               SizedBox(
-                height: 20.0,
+                height: 30.0,
               ),
-              Expanded(
-//                flex: 2,
-                child: FlatButton(
-                  onPressed: () {},
-                  color: Colors.green,
-                  child: Text(
-                    'Ajouter un trajet',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
+              Container(
+                margin: EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(10.0),
+                color: Colors.blueGrey,
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 3,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 20.0),
+                        child: Text(
+                          'Décembre',
+                          style: TextStyle(fontSize: 30.0),
+                        ),
+                      ),
                     ),
-                  ),
+                    Expanded(
+                      flex: 2,
+                      child: Column(
+                        children: <Widget>[
+                          Card(
+                            child: ListTile(
+                              leading: Icon(Icons.directions_bus),
+                              title: Text('12'),
+                            ),
+                          ),
+                          Card(
+                            child: ListTile(
+                              leading: Icon(Icons.euro_symbol),
+                              title: Text('16.80'),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              SizedBox(
-                height: 20.0,
+              Container(
+                child: Text('Zone 2'),
               ),
             ],
           ),
