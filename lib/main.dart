@@ -107,11 +107,11 @@ class Gestbus extends StatelessWidget {
                 height: 80.0,
                 margin: EdgeInsets.symmetric(horizontal: 10.0),
                 child: FlatButton(
-                  color: Colors.amber,
+                  color: Colors.amber.shade700,
                   onPressed: () {},
                   child: Text(
                     'Ajouter un trajet',
-                    style: TextStyle(fontSize: 30.0),
+                    style: TextStyle(fontSize: 25.0),
                   ),
                 ),
               ),
