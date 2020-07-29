@@ -65,8 +65,55 @@ class Gestbus extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 30.0,
+              ),
               Container(
-                child: Text('Zone 2'),
+                margin: EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  border: Border.all(width: 2.0),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(5.0),
+                  ),
+                ),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 3,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20.0),
+                        child: Text(
+                          "19",
+                          style: TextStyle(fontSize: 20.0),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Card(
+                        child: ListTile(
+                          leading: Icon(Icons.add_alarm),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Container(
+                height: 80.0,
+                margin: EdgeInsets.symmetric(horizontal: 10.0),
+                child: FlatButton(
+                  color: Colors.amber,
+                  onPressed: () {},
+                  child: Text(
+                    'Ajouter un trajet',
+                    style: TextStyle(fontSize: 30.0),
+                  ),
+                ),
               ),
             ],
           ),
