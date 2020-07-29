@@ -19,14 +19,37 @@ class Gestbus extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 flex: 4,
-                child: Container(
-                  color: Colors.redAccent,
-                  child: Text("Zone 1"),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(
+                        color: Colors.redAccent,
+                        child: Text(
+                          "Décembre",
+                          style: TextStyle(fontSize: 30.0),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Card(
+                        child: ListTile(
+                          leading: Icon(Icons.euro_symbol),
+                          title: Text('13'),
+                          subtitle: Text('Je suis las'),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Expanded(
                 flex: 4,
-                child: Text("Zone 2"),
+                child: Center(
+                  child: Container(
+                    child: Text("Zone 2"),
+                    color: Colors.grey,
+                  ),
+                ),
               ),
               SizedBox(
                 height: 20.0,
